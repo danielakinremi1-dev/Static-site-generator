@@ -1,4 +1,5 @@
 from src.textnode import TextNode, TextType
+from pathlib import Path
 
 
 def main():
@@ -7,4 +8,9 @@ def main():
     print(new)
 
 
-main()
+if __name__ == __main__:
+    main()
+
+
+def static_runner(sourcedir: Path, targetdir: Path) -> None:
+    
