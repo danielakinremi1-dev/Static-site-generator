@@ -138,7 +138,7 @@ def paragraph_to_html_node(block: str) -> HTMLNode:
     return htmlnode
 
 #---------------------
-def text_to_children(text ) -> list[LeafNode]:
+def text_to_children(text: str) -> list[LeafNode]:
     textnodes = text_to_textnodes(text) 
     children = []
     for textnode in textnodes:
