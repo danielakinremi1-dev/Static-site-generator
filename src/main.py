@@ -1,16 +1,17 @@
-from src.static_site_setup import static_runner, generate_page
+from src.static_site_setup import static_runner, generate_pages_recursive
 
 
-origin = "/home/akinremd/Workspace/Static_site_generator/content/index.md"
+origin = "/home/akinremd/Workspace/Static_site_generator/content"
 template = "/home/akinremd/Workspace/Static_site_generator/template.html"
-destination = "/home/akinremd/Workspace/Static_site_generator/public/index.html"
+destination = "/home/akinremd/Workspace/Static_site_generator/public"
 
 
 
 def main():
     print("Starting static site generator")
     static_runner()
-    generate_page(origin, template, destination)
+    generate_pages_recursive(origin, template, destination)
+    print("Initialized")
 
 
 if __name__ == "__main__":
