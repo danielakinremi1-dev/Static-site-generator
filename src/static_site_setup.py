@@ -4,7 +4,7 @@ from src.markdown_to_html_node import markdown_to_html_node
 
 def static_runner(sourcedir: str, targetdir: str) -> None:
     if not os.path.isdir(sourcedir):
-        return ValueError("Must use valid directory for source")
+        raise ValueError("Must use valid directory for source")
 
     if os.path.isdir(targetdir):
         shutil.rmtree(targetdir)
@@ -14,15 +14,10 @@ def static_runner(sourcedir: str, targetdir: str) -> None:
       
     for item in sourcedir_items:
         item_path = os.path.join(sourcedir, item)
-        if os.path.isfile(item_path):
-            with open("/home/akinremd/Workspace/Static_site_generator/static_files_log.txt", "a", encoding="utf-8") as file:
-                file.write(f"Copied file {item}\n")
-            item_path = os.path.join(sourcedir, item)
+        if os.path.isfile(item_path):  
             shutil.copy(item_path, targetdir)
 
-        elif os.path.isdir(item_path):
-            with open("/home/akinremd/Workspace/Static_site_generator/static_files_log.txt", "a", encoding="utf-8") as file:
-                file.write(f"Copied directory {item}\n")
+        elif os.path.isdir(item_path): 
             copied_dir = os.path.join(targetdir, item)
             os.mkdir(copied_dir)
             static_runner(item_path, copied_dir)

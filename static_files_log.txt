@@ -22,3 +22,9 @@ Copied file rivendell.png
 Copied file glorfindel.png
 Copied file tom.png
 Copied file tolkien.png
+Copied file index.css
+Copied directory images
+Copied file rivendell.png
+Copied file glorfindel.png
+Copied file tom.png
+Copied file tolkien.png

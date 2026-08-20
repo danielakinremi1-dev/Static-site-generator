@@ -2,12 +2,12 @@ from src.static_site_setup import static_runner, generate_pages_recursive
 import sys
 
 
-origin = "/home/akinremd/Workspace/Static_site_generator/content"
-template = "/home/akinremd/Workspace/Static_site_generator/template.html"
-destination = "/home/akinremd/Workspace/Static_site_generator/docs"
+origin = "content"
+template = "template.html"
+destination = "docs"
 
-sourcedir = "/home/akinremd/Workspace/Static_site_generator/static"
-targetdir = "/home/akinremd/Workspace/Static_site_generator/docs"
+sourcedir = "static"
+targetdir = "docs"
 
 if len(sys.argv) < 2:
     basepath = "/"
